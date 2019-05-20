@@ -17,7 +17,7 @@ class App extends Component {
   handleChange=(e)=>{
     this.setState({
       title : e.target.title.value,
-      text : e.target.text.value
+      
       
     })
   }
