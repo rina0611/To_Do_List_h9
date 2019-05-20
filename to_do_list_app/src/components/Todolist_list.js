@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 
-class Todolist_read extends Component{
+class Todolist_list extends Component{
     render(){
         return <div>
             Hello from Todolist_read
@@ -10,4 +10,4 @@ class Todolist_read extends Component{
 
 }
 
-export default Todolist_read;
+export default Todolist_list;

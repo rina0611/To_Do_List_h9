@@ -14,6 +14,7 @@ class Todolist_create extends Component{
     
       render() {
         const { open} = this.state;
+        const{title, text, handleChange,handleSubmit}=this.props;
         return (
           <div>
             <ButtonToolbar>
@@ -29,7 +30,13 @@ class Todolist_create extends Component{
             </Button></ButtonToolbar>
             <Collapse in={this.state.open}>
               <div id="create_to-do">
-                <Card border="primary" style={{width:'50%',height:'30%',margin:"0.5em"}}>
+                <Card border="primary" 
+                    style={{width:'50%',height:'30%',margin:"0.5em"}}
+                    action="/create_process" 
+                    method="post" 
+                    onSubmit={handleSubmit}
+                    
+                    >
                 <Card.Header >To do list 작성하기</Card.Header>
                 <Card.Body>
                                         
@@ -38,9 +45,13 @@ class Todolist_create extends Component{
                         <InputGroup.Text id="basic-addon1">제목</InputGroup.Text>
                         </InputGroup.Prepend>
                         <FormControl
+                            name="title"
                             placeholder="제목을 입력하세요."
                             aria-label="제목을 입력하세요."
-                            aria-describedby="basic-addon1"/>
+                            aria-describedby="basic-addon1"
+                            value={title}
+                            onChange={handleChange}
+                            />
                     </InputGroup>
                     
                     <InputGroup size="lg">
@@ -48,24 +59,16 @@ class Todolist_create extends Component{
                         <InputGroup.Text>내용</InputGroup.Text>
                         </InputGroup.Prepend>
                         <FormControl 
+                            name="text"
                             placeholder="내용을 입력하세요."
                             as="textarea" 
-                            aria-label="With textarea" />
+                            aria-label="With textarea" 
+                            value={text}
+                            onChange={handleChange}
+                            />
                     </InputGroup>
                     <br />
                     <>
-                    {/* <Accordion defaultActiveKey="0">
-                        <Card border="info" style={{flex:1, width:'35%',padding:'0.5 em'}}>
-                        <Card.Body>
-                            <Accordion.Toggle as={Button}  eventKey="0">
-                                마감기한 설정
-                            </Accordion.Toggle>
-                            <Accordion.Collapse eventKey="0">
-                            <Calendar_pick></Calendar_pick>
-                            </Accordion.Collapse>
-                        </Card.Body>
-                        </Card>
-                    </Accordion> */}
                     <Card  border="info" style={{width:'30%',padding:'0.5 em'}}>
                         <Card.Body>
                         <Form>
@@ -87,7 +90,7 @@ class Todolist_create extends Component{
                     <br />
                     <br />
                     <ButtonToolbar>
-                        <Button variant="primary" size="lg">
+                        <Button type="submit" variant="primary" size="lg">
                         추가하기
                         </Button>
                     </ButtonToolbar>
