@@ -10,24 +10,24 @@ class App extends Component {
     items:[],
     id:0,
     title:'',
-    text:'',
+    text:'', 
     date:'',
     editItem:false
   }
   handleChange=(e)=>{
-    this.setState({
+    this.setState({  
       title : e.target.title.value,
-      
+      text : e.target.text.value,
       
     })
-  }
+  }  
   handleSubmit=(e)=>{
     e.preventDefault();
   }
 
   render(){
     return (
-    <div>
+    <div>   
       <h1>
         <Navbar bg="light">
           <Navbar.Brand href="#home"> To Do List</Navbar.Brand>
