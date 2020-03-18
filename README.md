@@ -1,5 +1,4 @@
-# To_Do_List_h9
-  Javascript, React 스터디 시작. 
+# Javascript, React 스터디 시작. 
   
   오랜만에 Markdown 사용법도 알아봤다. 
   
