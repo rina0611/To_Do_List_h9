@@ -26,7 +26,7 @@ class Todolist_create extends Component{
               style={{margin:'1em'}}
               size="lg"
             >
-              + 추가
+              + 글 쓰기
             </Button></ButtonToolbar>
 
             <Collapse in={this.state.open}>
