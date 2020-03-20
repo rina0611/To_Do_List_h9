@@ -1,5 +1,5 @@
 import React,{Component} from "react";
-import {Collapse, Button, InputGroup, FormControl, ButtonToolbar,Card,Form ,Accordion} from 'react-bootstrap';
+import {Collapse, Button, InputGroup, FormControl, ButtonToolbar,Card,Form , Accordion} from 'react-bootstrap';
 import Calendar_pick from "./Calendar_pick"
 
 class Todolist_create extends Component{
@@ -13,7 +13,7 @@ class Todolist_create extends Component{
       }
     
       render() {
-        const { open} = this.state;
+        const {open} = this.state;
         const{title, text, handleChange,handleSubmit}=this.props;
         return (
           <div>
@@ -26,8 +26,9 @@ class Todolist_create extends Component{
               style={{margin:'1em'}}
               size="lg"
             >
-              +
+              + 추가
             </Button></ButtonToolbar>
+
             <Collapse in={this.state.open}>
               <div id="create_to-do">
                 <Card border="primary" 
@@ -94,7 +95,6 @@ class Todolist_create extends Component{
                         추가하기
                         </Button>
                     </ButtonToolbar>
-                    
                 </Card.Body>
                 </Card>
               </div>
