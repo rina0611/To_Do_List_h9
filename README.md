@@ -1167,7 +1167,7 @@ props로 받아오는 것은, Subject의 맥락을 보다 App의 맥락 안에�
     class TOC extends Component{
     render(){
         var tags=[];
-        var con= this.props.data;
+        var con= this.p rops.data;
         var i=0;
         while(i<con.length){
         tags.push(<li key={con[i].id}><a href="" 
